@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0197F6"
+    tools:context=".MainActivity">
+
+
+    <TextView
+        android:id="@+id/txt_score"
+        android:layout_width="63dp"
+        android:layout_height="70dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="220dp"
+        android:layout_marginTop="45dp"
+        android:background="@android:color/background_dark"
+        android:padding="10dp"
+        android:textAlignment="viewStart"
+        android:textColor="@android:color/white"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/txt_credito"
+        android:layout_width="199dp"
+        android:layout_height="70dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="21dp"
+        android:layout_marginTop="45dp"
+        android:background="@android:color/background_dark"
+        android:padding="10dp"
+        android:text="@string/txt_creditos"
+        android:textAlignment="center"
+        android:textColor="@android:color/white"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+
+
+    <FrameLayout
+        android:id="@+id/frame_bar"
+        android:layout_width="match_parent"
+        android:layout_height="216dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="130dp"
+        android:background="@drawable/frame">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:orientation="horizontal">
+
+            <com.example.pj5.ImageScrollView
+                android:id="@+id/token"
+                android:layout_width="130dp"
+                android:layout_height="200dp" />
+
+            <com.example.pj5.ImageScrollView
+                android:id="@+id/token2"
+                android:layout_width="130dp"
+                android:layout_height="200dp" />
+
+            <com.example.pj5.ImageScrollView
+                android:id="@+id/token3"
+                android:layout_width="130dp"
+                android:layout_height="200dp" />
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+    <Button
+        android:id="@+id/jugar_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="87dp"
+        android:text="@string/play_str"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="36sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/button_historial"
+        android:layout_width="191dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="21dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="42dp"
+        android:layout_toEndOf="@+id/button_reiniciar"
+        android:text="@string/historial"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/button_reiniciar"
+        android:layout_width="191dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="4dp"
+        android:layout_marginBottom="41dp"
+        android:background="@android:drawable/btn_default"
+        android:text="@string/reset"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/addCredit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="31dp"
+        android:clickable="true"
+        android:tint="#000000"
+        app:srcCompat="@drawable/ic_add_black_24dp" />
+
+
+    <GridLayout
+        android:id="@+id/grid_result"
+        android:layout_width="282dp"
+        android:layout_height="96dp"
+        android:layout_above="@+id/jugar_id"
+        android:layout_below="@+id/frame_bar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="6dp"
+        android:layout_marginBottom="9dp"
+        android:columnCount="2"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:useDefaultMargins="true"
+        tools:context=".MainActivity">
+
+        <TextView
+            android:id="@+id/label_numj"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="center"
+            android:text="@string/juego"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#000000"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/numJ"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/num_juego"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#000000"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/label_ganancia"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="center"
+            android:text="@string/ganancia"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#000000"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/ganancia"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/num_juego"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#000000"
+            android:textStyle="bold" />
+
+
+    </GridLayout>
+
+
+</RelativeLayout>

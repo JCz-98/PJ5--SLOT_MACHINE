@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">SLOT MACHINE</string>
+    <string name="play_str">PLAY!</string>
+    <string name="txt_creditos">CAPITAL:</string>
+    <string name="historial">HISTORIAL</string>
+    <string name="reset">RESET</string>
+    <string name="min_val">0</string>
+    <string name="max_val">10</string>
+    <string name="val_chosen">5</string>
+    <string name="num_juego">0</string>
+    <string name="juego">NUMERO DE JUEGO:</string>
+    <string name="ganancia">GANANCIA:</string>
+</resources>
